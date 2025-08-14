@@ -53,7 +53,6 @@ The store wants to keep customer addresses. Propose two architectures for the CU
 
 **HINT:** search type 1 vs type 2 slowly changing dimensions. 
 
-```
 **Type 1: Overwrite**  
 In this approach, address fields are stored directly in the **customers** table:  
 - `street`  
@@ -78,7 +77,6 @@ In this approach, a separate table **customer_address** is created to store hist
 
 Each time a customer changes their address, a new row is inserted with the updated details and appropriate date range. The `customer_id` will appear in multiple rows, allowing a full address history to be stored. This design is beneficial for tracking customer locations over time, supporting activities like marketing, fraud detection, or sales analysis by region.
 
-```
 
 ***
 
